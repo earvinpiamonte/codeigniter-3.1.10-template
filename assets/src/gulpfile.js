@@ -16,7 +16,7 @@ gulp.task('serve', function () {
 
     // Serve files from the root of this project
     browserSync.init({
-        proxy: 'localhost/codeigniter-3.1.9-template/'
+        proxy: 'localhost/codeigniter-3.1.10-template/'
     });
 
 	gulp.start('watch');

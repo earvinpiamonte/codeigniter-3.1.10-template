@@ -1,82 +1,70 @@
-# Welcome to my Codeigniter template
+###################
+What is CodeIgniter
+###################
 
-This is a simple template I created to be able to start a Codeigniter project in just a few minutes.
+CodeIgniter is an Application Development Framework - a toolkit - for people
+who build web sites using PHP. Its goal is to enable you to develop projects
+much faster than you could if you were writing code from scratch, by providing
+a rich set of libraries for commonly needed tasks, as well as a simple
+interface and logical structure to access these libraries. CodeIgniter lets
+you creatively focus on your project by minimizing the amount of code needed
+for a given task.
 
-This reduces the amount of time I spend in creating a new Codeigniter project. Before, I used to download Codeigniter on their website every time I need to create a new project. And then I update the config, htaccess, route etc and install packages I need individually.
+*******************
+Release Information
+*******************
 
-I then decided to create a simple template and just pull the template whenever I start a new Codeigniter project. Cool!
+This repo contains in-development code for future releases. To download the
+latest stable release please visit the `CodeIgniter Downloads
+<https://codeigniter.com/download>`_ page.
 
-## Features
-- Codeigniter 3.1.10.
-- Apache only (you need to configure on your own on nginx).
-- Bootstrap 4.
-- Sass.
-- Auto minify HTML, CSS and JavaScript files.
-- Optimized images.
-- Auto generate distribution files using **gulp-watch** or **gulp-serve**.
-- Auto reload browser when made changes on PHP files under `application/` folder.
-- Automatically applies changes to the browser when changes made on assets.
-- Automatic setting of `$config['base_url']`.
-- Automatic rewrite **www** and/ or **http**.
-- Assets expiration with versioning.
+**************************
+Changelog and New Features
+**************************
 
-## Development dependencies
-I really like using Sass as my CSS preprocessor on every project. Before, I use Less but now I use Sass. Hahaha, very punny. No? Okay here are the dependencies:
-- [Node.js](https://nodejs.org/en/)
-- [Sass](http://sass-lang.com/install)
+You can find a list of all changes for each release in the `user
+guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
-## Download
-Open up your terminal and make sure you are on the document root of your web server. For eg. **/var/www/html/** or **c:/wamp/www/** then do:
-```
-git clone https://gitlab.com/earvinpiamonte/codeigniter-3.1.10-template.git
-```
+*******************
+Server Requirements
+*******************
 
-## Install packages
+PHP version 5.6 or newer is recommended.
 
-Install packages needed for the project to run and the packages to be used on development.
+It should work on 5.3.7 as well, but we strongly advise you NOT to run
+such old versions of PHP, because of potential security and performance
+issues, as well as missing features.
 
-```
-cd codeigniter-3.1.10-template/assets/src/
-npm install
-```
+************
+Installation
+************
 
-## Create distribution files
+Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
+of the CodeIgniter User Guide.
 
-On the same folder `assets/src/` do:
+*******
+License
+*******
 
-```
-gulp
-```
+Please see the `license
+agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
-## Watch (optional)
+*********
+Resources
+*********
 
-You can also watch your `assets/src` files and then it will automatically apply changes to your distribution files `assets/dist`.
+-  `User Guide <https://codeigniter.com/docs>`_
+-  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
+-  `Community Forums <http://forum.codeigniter.com/>`_
+-  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
+-  `Community Slack Channel <https://codeigniterchat.slack.com>`_
 
-On the same folder `assets/src/` do:
+Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
+or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
 
-```
-gulp watch
-```
+***************
+Acknowledgement
+***************
 
-## Serve (optional but cool)
-
-You can also auto reload your browser/ inject styles whenever you make changes on  `assets/src` files and and *.php* files inside `application` then it will automatically apply changes to your distribution files `assets/dist`.
-
-Check first `assets/src/gulpfile.js` on line number 21 and change the value for **proxy** to your preference.
-
-eg. default:
-```javascript
-browserSync.init({
-        proxy: 'localhost/codeigniter-3.1.10-template/'
-});
-```
-
-On the same folder `assets/src/` do:
-
-```
-gulp serve
-```
-
-## DONE!
-> Don't let me drown
-> -- Bring Me the Horizon
+The CodeIgniter team would like to thank EllisLab, all the
+contributors to the CodeIgniter project and you, the CodeIgniter user.

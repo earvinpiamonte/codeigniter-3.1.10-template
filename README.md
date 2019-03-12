@@ -10,7 +10,7 @@ I then decided to create a simple template and just pull the template whenever I
 - Codeigniter 3.1.10.
 - Apache only (you need to configure on your own on nginx).
 - Bootstrap 4.
-- Sass.
+- SCSS.
 - Auto minify HTML, CSS and JavaScript files.
 - Optimized images.
 - Auto generate distribution files using **gulp-watch** or **gulp-serve**.

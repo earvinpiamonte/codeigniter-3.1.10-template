@@ -1,0 +1,5 @@
+node_modules
+assets/dist/
+
+application/session_dir/*
+!application/session_dir/index.html

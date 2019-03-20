@@ -21,14 +21,14 @@ gulp.task('serve', function () {
 
 	gulp.start('watch');
 
-	gulp.watch("../dist/images/*").on("change", reload);
-	gulp.watch("../../application/**/*.php").on("change", reload);
+	gulp.watch("dist/images/*").on("change", reload);
+	gulp.watch("application/**/*.php").on("change", reload);
 
 });
 
 // Optimize images
 gulp.task('optimize_images', function () {
-    gulp.src('images/*')
+    gulp.src('src/images/*')
     .pipe(imagemin(
         [
             imagemin.jpegtran(),
@@ -39,7 +39,7 @@ gulp.task('optimize_images', function () {
             verbose: true
         }
     ))
-    .pipe(gulp.dest('../dist/images'))
+    .pipe(gulp.dest('dist/images'))
     .pipe(notify({ message: 'optimize_images task complete.' }))
     ;
 });
@@ -47,7 +47,7 @@ gulp.task('optimize_images', function () {
 
 // Gulp task to minify CSS files
 gulp.task('minify_styles', function(){
-	return gulp.src('styles/*.scss')
+	return gulp.src('src/styles/*.scss')
    		// .pipe(sourcemaps.init())
    		.pipe(sass({outputStyle: 'compressed'})
    		.on('error', sass.logError))
@@ -56,7 +56,7 @@ gulp.task('minify_styles', function(){
             browsers: ['last 2 versions']
         }))
    		.pipe(concat('styles.min.css'))
-		.pipe(gulp.dest('../dist/styles/'))
+		.pipe(gulp.dest('dist/styles/'))
 		.pipe(browserSync.stream())
 		.pipe(notify({ message: 'minify_styles task complete.' }))
 	;
@@ -74,7 +74,7 @@ gulp.task('minify_libraries', function() {
 		)
 		.pipe(concat('libraries.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('../dist/libraries/'))
+		.pipe(gulp.dest('dist/libraries/'))
 		.pipe(browserSync.stream())
 		.pipe(notify({ message: 'minify_libraries task complete.' }))
 	;
@@ -84,12 +84,12 @@ gulp.task('minify_libraries', function() {
 gulp.task('minify_scripts', function() {
   return gulp.src(
 	      [
-	        'scripts/*.js'
+	        'src/scripts/*.js'
 	      ]
 	    )
 	    .pipe(concat('scripts.min.js'))
 	    .pipe(uglify())
-	    .pipe(gulp.dest('../dist/scripts/'))
+	    .pipe(gulp.dest('dist/scripts/'))
 	    .pipe(browserSync.stream())
 	    .pipe(notify({ message: 'minify_scripts task complete.' }))
     ;
@@ -99,12 +99,12 @@ gulp.task('minify_scripts', function() {
 gulp.task('minify_external_scripts', function() {
   return gulp.src(
 	      [
-	        'external/*.js'
+	        'src/external/*.js'
 	      ]
 	    )
 	    .pipe(concat('external.min.js'))
 	    .pipe(uglify())
-	    .pipe(gulp.dest('../dist/external/'))
+	    .pipe(gulp.dest('dist/external/'))
 	    .pipe(browserSync.stream())
 	    .pipe(notify({ message: 'minify_external_scripts task complete.' }))
     ;
@@ -123,9 +123,9 @@ gulp.task('default', function () {
 
 // Watch
 gulp.task('watch', function(){
-	gulp.watch('styles/*.scss' , ['minify_styles']);
 	gulp.watch('node_modules/*', ['minify_libraries']);
-	gulp.watch('scripts/*.js'  , ['minify_scripts']);
-	gulp.watch('external/*.js' , ['minify_external_scripts']);
-	gulp.watch('images/*'      , ['optimize_images']);
+	gulp.watch('src/styles/*.scss' , ['minify_styles']);
+	gulp.watch('src/scripts/*.js'  , ['minify_scripts']);
+	gulp.watch('src/external/*.js' , ['minify_external_scripts']);
+	gulp.watch('src/images/*'      , ['optimize_images']);
 });

@@ -36,13 +36,13 @@ git clone https://gitlab.com/earvinpiamonte/codeigniter-3.1.10-template.git
 Install packages needed for the project to run and the packages to be used on development.
 
 ```
-cd codeigniter-3.1.10-template/assets/src/
+cd codeigniter-3.1.10-template/
 npm install
 ```
 
 ## Create distribution files
 
-On the same folder `assets/src/` do:
+Do:
 
 ```
 gulp
@@ -50,9 +50,9 @@ gulp
 
 ## Watch (optional)
 
-You can also watch your `assets/src` files and then it will automatically apply changes to your distribution files `assets/dist`.
+You can also watch your `src` files and then it will automatically apply changes to your distribution files `dist`.
 
-On the same folder `assets/src/` do:
+Do:
 
 ```
 gulp watch
@@ -60,9 +60,9 @@ gulp watch
 
 ## Serve (optional but cool)
 
-You can also auto reload your browser/ inject styles whenever you make changes on  `assets/src` files and and *.php* files inside `application` then it will automatically apply changes to your distribution files `assets/dist`.
+You can also auto reload your browser/ inject styles whenever you make changes on  `src` files and and *.php* files inside `application` then it will automatically apply changes to your distribution files `dist`.
 
-Check first `assets/src/gulpfile.js` on line number 21 and change the value for **proxy** to your preference.
+Check first `gulpfile.js` on line number 19 and change the value for **proxy** to your preference.
 
 eg. default:
 ```javascript
@@ -71,7 +71,7 @@ browserSync.init({
 });
 ```
 
-On the same folder `assets/src/` do:
+On the same folder `src/` do:
 
 ```
 gulp serve

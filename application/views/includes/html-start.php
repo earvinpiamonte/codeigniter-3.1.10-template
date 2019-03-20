@@ -14,9 +14,9 @@
         }
     </style>
 
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="<?php echo base_url('assets/dist/styles/styles.min'.$this->config->item('assets_version_with_prefix').'.css'); ?>" />
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="<?php echo base_url('dist/styles/styles.min'.$this->config->item('assets_version_with_prefix').'.css'); ?>" />
     <noscript>
-        <link rel="stylesheet" href="<?php echo base_url('assets/dist/styles/styles.min'.$this->config->item('assets_version_with_prefix').'.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo base_url('dist/styles/styles.min'.$this->config->item('assets_version_with_prefix').'.css'); ?>" />
     </noscript>
 
 	<link rel="canonical" href="<?php echo base_url(); ?>" />

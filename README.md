@@ -9,7 +9,7 @@ I then decided to create a simple template and just pull the template whenever I
 ## Features
 - Codeigniter 3.1.10.
 - Apache only (you need to configure on your own on nginx).
-- Bootstrap 4.
+- Bootstrap 4.3.1.
 - SCSS.
 - Auto minify HTML, CSS and JavaScript files.
 - Optimized images.
@@ -21,7 +21,7 @@ I then decided to create a simple template and just pull the template whenever I
 - Assets expiration with versioning.
 
 ## Development dependencies
-I really like using Sass as my CSS preprocessor on every project. Before, I use Less but now I use Sass. Hahaha, very punny. No? Okay here are the dependencies:
+I really like using SCSS as my CSS preprocessor on every project. Before, I use Less but now I use SCSS. Hahaha, very punny. No? Okay here are the dependencies:
 - [Node.js](https://nodejs.org/en/)
 - [Sass](http://sass-lang.com/install)
 
@@ -50,7 +50,7 @@ gulp
 
 ## Watch (optional)
 
-You can also watch your `src` files and then it will automatically apply changes to your distribution files `dist`.
+You can also watch the `src` files and then it will automatically apply changes to the `dist` files.
 
 Do:
 
@@ -60,9 +60,9 @@ gulp watch
 
 ## Serve (optional but cool)
 
-You can also auto reload your browser/ inject styles whenever you make changes on  `src` files and and *.php* files inside `application` then it will automatically apply changes to your distribution files `dist`.
+You can also auto reload your browser/ inject styles whenever you make changes on the `src` files and the *.php* files inside `application` then it will automatically apply changes to your `dist` files.
 
-Check first `gulpfile.js` on line number 19 and change the value for **proxy** to your preference.
+Check first the `gulpfile.js` on line number 19 and change the value for **proxy** to your preference.
 
 eg. default:
 ```javascript
